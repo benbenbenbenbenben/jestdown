@@ -1,7 +1,10 @@
 {
   "name": "jestdown",
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**"
+  ],
   "license": "MIT",
   "dependencies": {
     "tibu": "^0.0.1-alpha1"
