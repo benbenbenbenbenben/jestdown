@@ -1,4 +1,4 @@
-import { parseSource } from "."
+import { parseSource } from "./parser"
 
 describe('index', () => {
     it('should parse h1', async () => {
