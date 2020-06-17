@@ -54,7 +54,7 @@ describe('index', () => {
             ]
         })
     })
-    fit('should parse a file', async () => {
+    it('should parse a file', async () => {
         const test = require("fs").readFileSync("./test.hide.md").toString()
         let parsed = parseSource(test) // ?+
          require("fs").writeFileSync("test.hide.json", JSON.stringify(parsed, null, 2))
