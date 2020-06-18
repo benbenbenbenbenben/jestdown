@@ -88,7 +88,8 @@ const block = rule(
 
 const document = rule(block, many(block)).yields((r, c) => {
     return {
-        elements: flatdef(c)
+        type: "document",
+        value: flatdef(c)
     }
 })
 

@@ -5,7 +5,8 @@ describe('index', () => {
         expect(parseSource(
             `# foobar dingus`
         )).toStrictEqual({
-            elements: [
+            type:"document",
+            value: [
                 {
                     type: "h1", value: {
                         type: "p", value: "foobar dingus"
@@ -18,7 +19,8 @@ describe('index', () => {
         expect(parseSource(
             "## foobar dingus"
         )).toStrictEqual({
-            elements: [
+            type:"document",
+            value: [
                 {
                     type: "h2", value: {
                         type: "p", value: "foobar dingus"
@@ -31,7 +33,8 @@ describe('index', () => {
         expect(parseSource(
             `foobar dingus`
         )).toStrictEqual({
-            elements: [
+            type:"document",
+            value: [
                 {
                     type: "p", value: "foobar dingus"
                 }
@@ -44,7 +47,8 @@ describe('index', () => {
         ) 
         JSON.stringify(parsed, null, 2)// ?+
         expect(parsed).toStrictEqual({
-            elements: [
+            type:"document",
+            value: [
                 {
                     type: "li",
                     value: [{
